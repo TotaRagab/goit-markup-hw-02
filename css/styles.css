@@ -1,0 +1,324 @@
+/* BASE STYLE */
+
+:root {
+  --logo-color: #000;
+  --action: #2196f3;
+  --main: #212121;
+  --text: #757575;
+  --light-text: #fff;
+  --card-bg: #fff;
+  --dark-bg: #2f303a;
+  --light-bg: #f5f4fa;
+  --border: #eee;
+  --footer-text: rgba(255, 255, 255, 0.6);
+  --header-border: #ececec;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  list-style: none;
+  border: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--main);
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 24px 215px 25px;
+  border-bottom: 1px solid var(--header-border);
+}
+
+.header .nav {
+    display: flex;
+    margin-right: auto;
+}
+
+.header .nav .logo {
+    font-family: 'Raleway';
+    color: var(--logo-color);
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    line-height: 1.19230769;
+}
+
+.header .nav .logo .logo-color {
+    color: var(--action);;
+}
+
+.header .nav .list, .header .contact-list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header .nav .list {
+    margin-left: 93px;
+}
+
+.header .nav .list .item .link, .header .contact-list .item .link {
+    font-size: 14px;
+    line-height: 1.14285714;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+}
+
+.header .contact-list .item .link {
+    color: var(--text);
+}
+
+.header .nav .list .item .link:hover,
+.header .nav .list .item .link:focus,
+.header .contact-list .item .link:hover,
+.header .contact-list .item .link:focus {
+    color: var(--action);
+    outline: none;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 215px;
+    background: var(--dark-bg);
+}
+
+.footer .logo {
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    color: var(--logo-color);
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    line-height: 1.19230769;
+}
+
+.footer .logo .logo-color {
+    color: var(--action);;
+}
+
+.footer .address {
+    font-style: normal;
+}
+
+.footer .address .list .item {
+    margin-bottom: 9px;
+}
+
+.footer .address .list .item.address-item .link {
+    color: var(--light-text);
+}
+
+.footer .address .list .item .link {
+    display: inline-block;
+    color: var(--footer-text);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* INDEX MAIN BANNER SECTION */
+
+.main .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background: var(--dark-bg);
+}
+
+.main .banner .title {
+    width: 696px;
+    margin-bottom: 30px;
+    color: var(--light-text);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+.main .banner .order {
+    padding: 10px 32px;
+    background: var(--action);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--light-text);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+/* INDEX MAIN ADVANTAGES SECTION */
+
+.main .advantages {
+    padding: 94px 215px;
+}
+
+.main .advantages .list {
+    display: flex;
+    gap: 30px;
+}
+
+.main .advantages .list .item .item-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14285714;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.main .advantages .list .item .text {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+/* INDEX MAIN SERVICES SECTION */
+
+.main .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 215px 94px;
+}
+
+.main .services .title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16666667;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.main .services .list {
+    display: flex;
+    gap: 30px;
+    margin: auto;
+}
+
+.main .services .list .image {
+    display: block;
+}
+
+/* INDEX MAIN TEAM SECTION */
+
+.main .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 94px 215px 94px;
+    background: var(--light-bg);
+}
+
+.main .team .title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16666667;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.main .team .list {
+    display: flex;
+    gap: 30px;
+    margin: auto;
+}
+
+.main .team .list .item {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.main .team .list .item .item-title {
+    margin: 30px 0 10px;
+}
+
+.main .team .list .item .item-title, .main .team .list .item .text {
+    font-size: 16px;
+    line-height: 1.1875;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.main .team .list .item .text {
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+/* PORTFOLIO PORTFOLIO SECTION */
+
+.main .portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 94px 215px;
+}
+
+.main .portfolio .filter-list {
+    display: flex;
+    gap: 8px;
+    margin: 0 auto 50px;
+}
+
+.main .portfolio .filter-list .item .filter-button {
+    padding: 6px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+}
+
+.main .portfolio .filter-list .item .filter-button:hover, .main .portfolio .filter-list .item .filter-button:focus {
+    background: var(--action);
+    color: var(--light-text);
+    outline: none;
+}
+
+.main .portfolio .work-list {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 370px);
+    gap: 30px;
+}
+
+.main .portfolio .work-list .item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+}
+
+.main .portfolio .work-list .item .wrap {
+    background: var(--card-bg);
+    padding: 20px 24px;
+}
+
+.main .portfolio .work-list .item .wrap .title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.main .portfolio .work-list .item .wrap .text {
+    line-height: 1.88;
+}
