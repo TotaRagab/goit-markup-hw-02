@@ -1,13 +1,10 @@
-/* BASE STYLE */
-
 :root {
+  --light-color: #FFFFFF;
+  --main: #212121;
   --logo-color: #000;
   --action: #2196f3;
-  --main: #212121;
+  --button-hover: #188CE8;
   --text: #757575;
-  --light-text: #fff;
-  --card-bg: #fff;
-  --body-bg: #fff;
   --dark-bg: #2f303a;
   --light-bg: #f5f4fa;
   --border: #eee;
@@ -16,10 +13,9 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Roboto', sans-serif;
-  color: var(--main);
   background: var(--body-bg);
+  color: var(--main);
 }
 
 .visually-hidden {
@@ -35,61 +31,41 @@ body {
   overflow: hidden;
 }
 
-/* HEADER */
+/* HEADER*/
 
 .header {
-  display: flex;
-  align-items: center;
-  padding: 24px 215px 25px;
+  background: var(--light-color);
   border-bottom: 1px solid var(--header-border);
 }
 
-.nav {
-  display: flex;
-  margin-right: auto;
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .nav-logo {
   font-family: 'Raleway', sans-serif;
-  color: var(--logo-color);
-  font-weight: 700;
   font-size: 26px;
+  line-height: 1.19;
   letter-spacing: 0.03em;
-  line-height: 1.19230769;
-  text-decoration: none;
+  color: var(--logo-color);
 }
 
-.nav-logo-color {
-  color: var(--action);
-}
-
-.nav-list, .contact-list {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav-list {
-  margin-left: 93px;
-}
-
-.nav-link {
-  color: var(--main);
-}
-
+.nav-logo-color,
 .nav-link.current {
   color: var(--action);
 }
 
-.nav-link, .contact-link {
-  font-size: 14px;
-  line-height: 1.14285714;
-  letter-spacing: 0.02em;
+.nav-link,
+.contact-link {
   font-weight: 500;
-  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: inherit;
 }
 
 .contact-link {
@@ -103,23 +79,103 @@ body {
   color: var(--action);
 }
 
-/* FOOTER */
+/* HERO*/
+.hero {
+  background: var(--dark-bg);
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--light-color);
+}
+
+.hero-btn {
+  background: var(--action);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--light-color);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background: var(--button-hover);
+}
+
+/* ADVANTAGES*/
+
+.advantages-item-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advantages-item-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text);
+}
+
+/*SERVICES*/
+
+.services-title,
+.team-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team {
+  background: var(--light-bg);
+}
+
+.team-item {
+  background: var(--light-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item-title {
+  font-weight: 500;
+}
+
+.team-item-title,
+.team-item-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-item-text {
+  color: var(--text);
+}
+
+/*FOOTEER*/
 
 .footer {
-  padding: 60px 215px;
   background: var(--dark-bg);
 }
 
 .footer-logo {
-  display: inline-block;
-  margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
-  color: var(--light-text);
-  font-weight: 700;
   font-size: 26px;
+  line-height: 1.19;
   letter-spacing: 0.03em;
-  line-height: 1.19230769;
-  text-decoration: none;
+  color: var(--light-color);
 }
 
 .footer-logo-color {
@@ -130,200 +186,23 @@ body {
   font-style: normal;
 }
 
-.footer-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.footer-item {
-  margin-bottom: 9px;
-}
-
-.footer-item.no-margin {
-    margin-bottom: 0;
-}
-
 .footer-item-link {
-  display: inline-block;
-  color: var(--footer-text);
-  font-size: 14px;
-  line-height: 1.71428571;
-  text-decoration: none;
-  letter-spacing: 0.03em;
-}
-
-.footer-item-link:hover, .footer-item-link:focus {
-  color: var(--light-text);
-}
-
-/* INDEX BANNER SECTION */
-
-.banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 600px;
-  background: var(--dark-bg);
-}
-
-.banner-title {
-  width: 696px;
-  margin-bottom: 30px;
-  color: var(--light-text);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  text-align: center;
-}
-
-.order {
-  padding: 10px 32px;
-  background: var(--action);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: var(--light-text);
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  border-color: transparent;
-}
-
-.order:hover {
-  opacity: .9;
-}
-
-/* INDEX ADVANTAGES SECTION */
-
-.advantages {
-  padding: 94px 215px;
-}
-
-.advantages-list {
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.advantages-item-title {
-  margin: 0 0 10px 0;
-  font-size: 14px;
-  line-height: 1.14285714;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.advantages-item-text {
-  margin: 0;
-  color: var(--text);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: var(--footer-text);
 }
 
-/* INDEX SERVICES SECTION */
-
-.services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 215px 94px;
+.footer-item-link.adress {
+  color: var(--light-color);
 }
 
-.services-title {
-  margin: 0 0 50px 0;
-  font-size: 36px;
-  line-height: 1.16666667;
-  text-align: center;
-  letter-spacing: 0.03em;
+.footer-item-link:hover,
+.footer-item-link:focus {
+  color: var(--action);
 }
 
-.services-list {
-  display: flex;
-  gap: 30px;
-  padding: 0;
-  margin: auto;
-  list-style: none;
-}
-
-.services-item-image {
-  display: block;
-}
-
-/* INDEX TEAM SECTION */
-
-.team {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 94px 215px 94px;
-  background: var(--light-bg);
-}
-
-.team-title {
-  margin: 0 0 50px 0;
-  font-size: 36px;
-  line-height: 1.16666667;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.team-list {
-  display: flex;
-  gap: 30px;
-  margin: auto;
-  padding: 0;
-  list-style: none;
-}
-
-.team-item {
-  display: flex;
-  flex-direction: column;
-  background: var(--card-bg);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team .list .item .item-title {
-  margin: 30px 0 10px;
-}
-
-.team-item-title, .team-item-text {
-  font-size: 16px;
-  line-height: 1.1875;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.team-item-text  {
-  color: var(--text);
-  margin: 0 0 30px 0;
-}
-
-/* PORTFOLIO PORTFOLIO SECTION */
-
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 94px 215px;
-}
-
-.filter-list {
-  display: flex;
-  gap: 8px;
-  margin: 0 auto 50px;
-  padding: 0;
-  list-style: none;
-}
-
+/*PORTFOLIO SECTION*/
 .filter-button {
   padding: 6px 22px;
   border-radius: 4px;
@@ -334,43 +213,22 @@ body {
   letter-spacing: 0.03em;
   border-color: transparent;
   font-family: inherit;
+  background: var(--light-bg);
+  border-radius: 4px;
 }
 
-.filter-button:hover, .filter-button:focus {
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--light-color);
   background: var(--action);
-  color: var(--light-text);
-}
-
-.work-list {
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 370px);
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .work-list-item {
-  display: flex;
-  flex-direction: column;
+  background: var(--light-color);
   border: 1px solid var(--border);
 }
 
-.work-link {
-  text-decoration: none;
-}
-
-.work-image {
-  display: block;
-}
-
-.work-wrap {
-  background: var(--card-bg);
-  padding: 20px 24px;
-}
-
 .work-title {
-  margin: 0 0 4px 0;
   color: var(--main);
   font-size: 18px;
   line-height: 2;
@@ -378,7 +236,8 @@ body {
 }
 
 .work-text {
-  margin: 0;
+  font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.03em;
   color: var(--text);
 }
